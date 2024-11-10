@@ -62,21 +62,22 @@
 
         }
 
-        window.addEventListener('load', function() {
-            // startMusic();
-             const audio = document.getElementById("bgm");
+        // window.addEventListener('load', function() {
+        //     // startMusic();
+        //      const audio = document.getElementById("bgm");
 
-            audio.muted = true;
-            audio.play().then(() => {
-                audio.muted = false;
-            })
-        });
+        //     audio.muted = true;
+        //     audio.play().then(() => {
+        //         audio.muted = false;
+        //     })
+        // });
         
     </script>
     <div id="parchment">
-        <div id="envelope"  onclick="handleclickSeal()">
-        <img id="seal" src="./toppng.com-hogwarts-seal-png-hogwarts-seal-977x961.png"  alt="seal" width="100px" />
-          <p> 당신을 초대합니다 </p> 
+        <div id="envelope"  >
+            <button onclick="handleclickSeal()" id="seal"  >
+        <img class="seal-img" src="./toppng.com-hogwarts-seal-png-hogwarts-seal-977x961.png"  alt="seal" width="100px" /></button>
+          <p> 호그와트에서 열리는 피로연에 당신을 초대합니다 </p> 
        </div>
 
        <div id="invitation" >
