@@ -23,6 +23,7 @@
             bgm?.play();
         }
 
+        startMusic();
         function copyText(value) {
             const textToCopy = document.getElementById(`text-to-copy-${value}`).textContent;
 
@@ -34,6 +35,7 @@
 
             })
         }
+
 
 
     </script>
@@ -76,7 +78,8 @@
                 <br /><span id="text-to-copy-b" onclick="copyText('b')">임효빈 신한 110474271477</span>
             </p>
             </p>
-            <p id="copy-alert" style="display: none; color: green;">copied!</p>
+            <p id="copy-alert" style="display: none; color: green;">
+                Copied!</p>
 
         </div>
 
