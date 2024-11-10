@@ -29,7 +29,7 @@ body {
   box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
   background: #f5deb3;
   flex-direction: column;
-  color: #3c231b;
+  color: #3b2f2f;
   opacity: 0;
   transform: translateY(50px);
   animation: floatUp 1.5s ease-out forwards;
@@ -94,7 +94,7 @@ p {
 }
 
 .map {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-self: center;
