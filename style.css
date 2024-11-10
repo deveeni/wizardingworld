@@ -112,6 +112,9 @@ p {
   font-weight: lighter;
 }
 
+.underline {
+  text-decoration: underline;
+}
 @keyframes moveUpDown {
   0% {
     transform: translateY(0);
