@@ -52,6 +52,15 @@
             })
         }
 
+        function handleclickSeal() {
+            const envelope = document.getElementById("envelope");
+            const invitation = document.getElementById("invitation");
+
+            startMusic();
+            envelope.style.display = "none";
+            invitation.style.display = "flex";
+
+        }
 
         window.addEventListener('load', function() {
             // startMusic();
@@ -65,7 +74,12 @@
         
     </script>
     <div id="parchment">
+        <div id="envelope"  onclick="handleclickSeal()">
+        <img id="seal" src="./toppng.com-hogwarts-seal-png-hogwarts-seal-977x961.png"  alt="seal" width="100px" />
+          <p> 당신을 초대합니다 </p> 
+       </div>
 
+       <div id="invitation" >
         <img src="./logo.png" alt="logo2" width="130px" id="logo" />
         <div>
             <h1>HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDARY</h1>
@@ -112,7 +126,7 @@
             <p>호그와트 마법학교,<br /> 결혼식 주최 위원회 드림</p>
         </div>
         <svg id="music" xmlns="http://www.w3.org/2000/svg" onclick="handleMusic()" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
-
+    </div>
     </div>
     <audio id="bgm" src="./prologue.m4a" loop></audio>
     </main>
