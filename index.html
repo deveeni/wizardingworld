@@ -7,7 +7,7 @@
     <title>태훈&효빈 피로연 초대장</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./logo.png" type="image/png">
-    <meta property="og:url" content="https://tei-been.co.uk" >
+    <meta property="og:url" content="https://tei-been.co.uk">
     <meta property="og:title" content="호그와트 만찬 피로연으로의 초대">
     <meta property="og:description" content="태훈 & 효빈 결혼 피로연에 당신을 초대합니다">
     <meta property="og:image" content="https://tei-been.co.uk/night_of_hogwarts.jpg">
@@ -26,23 +26,23 @@
             bgm?.play();
         }
 
-       
-        
+
+
         function handleMusic() {
             const bgm = document.getElementById("bgm");
             const icon = document.getElementById("music");
 
-            if(bgm){
-                if(bgm.paused){
+            if (bgm) {
+                if (bgm.paused) {
                     bgm.play();
-                    icon.style.color='inherit';
-                }else {
+                    icon.style.color = 'inherit';
+                } else {
                     bgm.pause();
-                    icon.style.color='gray';
+                    icon.style.color = 'gray';
                 }
             }
         }
-        
+
         function copyText(value) {
             const textToCopy = document.getElementById(`text-to-copy-${value}`).textContent;
 
@@ -62,76 +62,87 @@
             startMusic();
             envelope.style.display = "none";
             invitation.style.display = "flex";
-
         }
 
-        // window.addEventListener('load', function() {
-        //     // startMusic();
-        //      const audio = document.getElementById("bgm");
 
-        //     audio.muted = true;
-        //     audio.play().then(() => {
-        //         audio.muted = false;
-        //     })
-        // });
-        
+        window.addEventListener('load', () => {
+            const params = new URLSearchParams(window.location.search);
+
+            const name = params.get('name');
+
+            if (name) {
+                document.getElementById('name').textContent = name;
+            }
+
+        })
+
+
     </script>
     <div id="parchment">
-        <div id="envelope"  >
-            <button onclick="handleclickSeal()" id="seal"  >
-        <img class="seal-img" src="./toppng.com-hogwarts-seal-png-hogwarts-seal-977x961.png"  alt="seal" width="100px" /></button>
-          <p> 호그와트에서 열리는 피로연에 당신을 초대합니다 </p> 
-       </div>
-
-       <div id="invitation" >
-        <img src="./logo.png" alt="logo2" width="130px" id="logo" />
-        <div>
-            <h1>HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDARY</h1>
-            <h2>태훈 & 효빈의 결혼 피로연 초대장</h2>
-        </div>
-        <div>
-            <p>친애하는 마법사 및 마녀 여러분께, </p>
-            <p> 호그와트 마법학교에서는 <span class="bold">태훈 & 효빈</span> 두 사람의 결혼을 축하하기 위해 특별히 준비한 마법세계 결혼 피로연에 여러분을 정중히 초대합니다.
-                부디 참석하여 자리를 빛내주시길 바랍니다.</p>
-
-            <p><span class="bold">🪄 준비물:</span> 마법복장 <span class="light">(망토, 모자 또는 애장하시는 마법의 장신구)</span> <br /> *
-                머글(노마지)의 출입은 엄격히 금지됩니다.</p>
-            <p><span class="bold">🕰 연회 일시:</span> 2024년 12월 28일 (토) 저녁 6시</p>
-            <p><span class="bold">📍 장소:</span> 호그와트 대연회장 (아래 지도 참고) </p>
-            <br />
-            <p>아래 올빼미를 통해 참석 여부를 회신해 주시기 바랍니다, 저희가 멋진 파티를 준비하는 데 큰 도움이 될것입니다. <br />
-                <a href="https://forms.gle/maqEt3EidotFKspC6"><img id="hedwig" src="./owl.png" alt="hedwig"
-                        width="70px"></img> </a>
+        <div id="envelope">
+            <button onclick="handleclickSeal()" id="seal">
+                <img class="seal-img" src="./toppng.com-hogwarts-seal-png-hogwarts-seal-977x961.png" alt="seal"
+                    width="100px" /></button>
+            <p><span class="bold" id="name"></span>님을 초대합니다</p>
         </div>
 
+        <div id="invitation">
+            <img src="./logo.png" alt="logo2" width="130px" id="logo" />
+            <div>
+                <h1>HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDARY</h1>
+                <h2>태훈 & 효빈의 결혼 피로연 초대장</h2>
+            </div>
+            <div>
+                <p>친애하는 마법사 및 마녀 여러분께, </p>
+                <p> 호그와트 마법학교에서는 <span class="bold">태훈 & 효빈</span> 두 사람의 결혼을 축하하기 위해 특별히 준비한 마법세계 결혼 피로연에 여러분을 정중히
+                    초대합니다.
+                    부디 참석하여 자리를 빛내주시길 바랍니다.</p>
 
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.94252414703!2d127.02791641318608!3d37.48568267194308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca14892920099%3A0x7622624ae24a233a!2s1364-28%20Seocho-dong%2C%20Seocho%20District%2C%20Seoul%2C%20South%20Korea!5e0!3m2!1sen!2sie!4v1731187501925!5m2!1sen!2sie"
-                width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><span class="bold">🪄 준비물:</span> 마법복장 <span class="light">(망토, 모자 또는 애장하시는 마법의 장신구)</span> <br /> *
+                    머글(노마지)의 출입은 엄격히 금지됩니다.</p>
+                <p><span class="bold">🕰 연회 일시:</span> 2024년 12월 28일 (토) 저녁 6시</p>
+                <p><span class="bold">📍 장소:</span> 호그와트 대연회장 (아래 지도 참고) </p>
+                <br />
+                <p>아래 <span class="bold">올빼미</span>를 통해 참석 여부를 회신해 주시기 바랍니다, 저희가 멋진 파티를 준비하는 데 큰 도움이 될것입니다. <br />
+                    <a href="https://forms.gle/maqEt3EidotFKspC6"><img id="hedwig" src="./owl.png" alt="hedwig"
+                            width="70px"></img> </a>
+            </div>
+
+
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.94252414703!2d127.02791641318608!3d37.48568267194308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca14892920099%3A0x7622624ae24a233a!2s1364-28%20Seocho-dong%2C%20Seocho%20District%2C%20Seoul%2C%20South%20Korea!5e0!3m2!1sen!2sie!4v1731187501925!5m2!1sen!2sie"
+                    width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <p>서울 서초구 서운로6길 22 지하1층 1호</p>
-            <a href="https://naver.me/FiO3xpPn"><img src="./navermap_icon.webp" alt="navermap_icon" width="30px" /></a>
+                <a href="https://naver.me/FiO3xpPn"><img src="./navermap_icon.webp" alt="navermap_icon"
+                        width="30px" /></a>
 
+            </div>
+
+            <div class="bottom" class="light">
+
+                <p> 혹여 축의금을 전하고자 하시는 분께서는 현장에 설치하지 못하는 관계로, 아래 계좌로 보내주시면 감사히 받겠습니다.</p>
+                <p> <span id="text-to-copy-t" onclick="copyText('t')">이태훈 신한 110347136610</span>
+                    <br /><span id="text-to-copy-b" onclick="copyText('b')">임효빈 신한 110474271477</span>
+                </p>
+                </p>
+                <p id="copy-alert" style="display: none; color: green;">
+                    Copied!</p>
+
+            </div>
+
+            <div class="footer">
+                <p>호그와트 마법학교,<br /> 결혼식 주최 위원회 드림</p>
+            </div>
+            <svg id="music" xmlns="http://www.w3.org/2000/svg" onclick="handleMusic()" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-music">
+                <path d="M9 18V5l12-2v13"></path>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="16" r="3"></circle>
+            </svg>
         </div>
-
-        <div class="bottom" class="light">
-
-            <p> 혹여 축의금을 전하고자 하시는 분께서는 현장에 설치하지 못하는 관계로, 아래 계좌로 보내주시면 감사히 받겠습니다.</p>
-            <p> <span id="text-to-copy-t" onclick="copyText('t')">이태훈 신한 110347136610</span>
-                <br /><span id="text-to-copy-b" onclick="copyText('b')">임효빈 신한 110474271477</span>
-            </p>
-            </p>
-            <p id="copy-alert" style="display: none; color: green;">
-                Copied!</p>
-
-        </div>
-
-        <div class="footer">
-            <p>호그와트 마법학교,<br /> 결혼식 주최 위원회 드림</p>
-        </div>
-        <svg id="music" xmlns="http://www.w3.org/2000/svg" onclick="handleMusic()" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
-    </div>
     </div>
     <audio id="bgm" src="./prologue.m4a" loop></audio>
     </main>

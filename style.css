@@ -1,18 +1,5 @@
-@font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
 
-@font-face {
-  font-family: "GothicA1-Light";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2")
-    format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
 @font-face {
   font-family: "Chosunilbo_myungjo";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
@@ -41,8 +28,6 @@ body {
   opacity: 0;
   transform: translateY(50px);
   animation: floatUp 1.5s ease-out forwards;
-
-  font-family: "Chosunilbo_myungjo";
 }
 @keyframes floatUp {
   from {
@@ -104,15 +89,18 @@ body {
 h1 {
   font-size: medium;
   text-align: center;
+  font-family: "Cormorant Garamond", serif;
 }
 
 h2 {
   font-size: large;
   text-align: center;
+  font-family: "Chosunilbo_myungjo", sans-serif;
 }
 
 p {
   line-height: 1.3em;
+  font-family: "Chosunilbo_myungjo", sans-serif;
   font-size: small;
 }
 
