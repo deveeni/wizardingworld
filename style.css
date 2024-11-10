@@ -13,6 +13,14 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #3c231b;
 
@@ -99,6 +107,7 @@ h1 {
 h2 {
   font-size: large;
   text-align: center;
+  font-family: "Chosunilbo_myungjo";
 }
 
 p {
