@@ -27,11 +27,23 @@ body {
   margin: 1em;
   padding: 3em 1.5em;
   box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
-  background: #f3f1e1;
+  background: #f5deb3;
   flex-direction: column;
   color: #3c231b;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: floatUp 1.5s ease-out forwards;
 }
-
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 #music {
   position: absolute;
   top: 6px;
