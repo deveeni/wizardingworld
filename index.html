@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>invitation</title>
-  </head>
-  <body>
-    hello
-  </body>
+    <title>태훈&효빈 피로연 초대장</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript"
+        src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
+    <link rel="icon" href="./logo.png" type="image/png">
+    <meta property="og:title" content="호그와트 만찬 피로연으로의 초대">
+    <meta property="og:description" content="태훈 & 효빈 결혼 피로연에 당신을 초대합니다">
+    <meta property="og:image" content="./night_of_hogwarts.png">
+    <meta property="og:type" content="website">
+
+</head>
+
+<body>
+    <script>
+        function startMusic() {
+            const bgm = document.getElementById("bgm");
+            bgm?.play();
+        }
+        startMusic()
+
+        function copyText() {
+            const textToCopy = document.getElementById("text-to-copy-t").textContent;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const alert = document.getElementById('copy-alert');
+
+                alert.style.display = "block"
+            }).finally(() => {
+
+            })
+
+
+            textToCopy.addEventListener('onClick')
+        }
+
+
+    </script>
+    <div id="parchment">
+        <img src="./logo.png" alt="logo2" width="200px" />
+
+        <div>
+            <h1>HOGWARTS SCHOOL of WITCHCRAFT and WIZARDARY</h1>
+            <h2>태훈 효빈의 결혼 피로연 초대장</h2>
+            <p>친애하는 마법사 및 마법 생물 여러분께, </p>
+            <p> 호그와트 마법학교에서는 <span class="bold">태훈 & 효빈</span> 두 사람의 결혼을 축하하기 위해 특별히 준비한 마법 결혼 피로연에 여러분을 정중히 초대합니다. 이
+                특별한 연회에서 마법과 사랑이 어우러진 밤을 여러분과 함께 나누고자 하오니, 부디 참석하여 자리를 빛내주시길 바랍니다.</p>
+
+            <p><span class="bold">준비물:</span> 마법복장 (예: 망토, 모자 또는 애장하시는 마법의 장신구) <br /> * 머글(노마지)의 출입은 엄격히 금지됩니다.</p>
+            <p><span class="bold">연회 일시:</span> 2024년 12월 28일 (토) 저녁 6시</p>
+            <p><span class="bold">장소:</span> 호그와트 대연회장 (아래 마법 지도 참고) </p>
+            <br />
+            <p>아래 올빼미를 통해 참석 여부를 회신해 주시기 바랍니다, 저희가 멋진 파티를 준비하는 데 큰 도움이 될것입니다. <br />
+                <a href="https://forms.gle/maqEt3EidotFKspC6"><img id="hedwig"
+                        src="./harry-potter-and-the-philosopher-s-stone-owl-hedwig-hogwarts-harry-potter-ff73108d4ead8be7d1917d083215ed2b.png"
+                        alt="hedwig" width="50px"></img> </a>
+
+
+        </div>
+
+        <div class="map">
+            <a href="https://naver.me/FiO3xpPn"><img src="./navermap_icon.webp" alt="navermap_icon" width="30px" /></a>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.94252414703!2d127.02791641318608!3d37.48568267194308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca14892920099%3A0x7622624ae24a233a!2s1364-28%20Seocho-dong%2C%20Seocho%20District%2C%20Seoul%2C%20South%20Korea!5e0!3m2!1sen!2sie!4v1731187501925!5m2!1sen!2sie"
+                width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="bottom">
+
+            <p class="light"> 혹여 축의금을 전하고자 하시는 분께서는 현장에 설치하지 못하는 관계로, 아래 계좌로 보내주시면 감사히 받겠습니다.</p>
+            <p> 이태훈: 신한 <span id="text-to-copy-t" onclick="copyText()">110347136610</span><br /> 임효빈: 신한 110474271477
+            </p>
+            <p id="copy-alert" style="display: none; color: green;">copied!</p>
+
+        </div>
+
+        <div>
+            <p>호그와트 마법학교,<br /> 결혼식 주최 위원회 드림</p>
+        </div>
+
+    </div>
+    <audio id="bgm" src="./Prologue.mp3" autoplay loop></audio>
+    <!-- <button onclick="startMusic()">음악 재생</button> -->
+
+
+
+    </main>
+
+</body>
+
 </html>
