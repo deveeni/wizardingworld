@@ -23,6 +23,8 @@
             bgm?.play();
         }
 
+       
+        
         function handleMusic() {
             const bgm = document.getElementById("bgm");
             const icon = document.getElementById("music");
@@ -52,7 +54,13 @@
 
 
         window.addEventListener('load', function() {
-            startMusic();
+            // startMusic();
+             const audio = document.getElementById("bgm");
+
+            audio.muted = true;
+            audio.play().then(() => {
+                audio.muted = false;
+            })
         });
         
     </script>
