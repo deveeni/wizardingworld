@@ -41,6 +41,8 @@ body {
   opacity: 0;
   transform: translateY(50px);
   animation: floatUp 1.5s ease-out forwards;
+
+  font-family: "Chosunilbo_myungjo";
 }
 @keyframes floatUp {
   from {
@@ -107,12 +109,10 @@ h1 {
 h2 {
   font-size: large;
   text-align: center;
-  font-family: "Chosunilbo_myungjo";
 }
 
 p {
   line-height: 1.3em;
-  font-family: "Pretendard-Regular";
   font-size: small;
 }
 
