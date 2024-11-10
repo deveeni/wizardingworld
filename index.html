@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>태훈&효빈 피로연 초대장</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript"
-        src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
     <link rel="icon" href="./logo.png" type="image/png">
     <meta property="og:title" content="호그와트 만찬 피로연으로의 초대">
     <meta property="og:description" content="태훈 & 효빈 결혼 피로연에 당신을 초대합니다">
@@ -18,12 +16,28 @@
 
 <body>
     <script>
+
         function startMusic() {
             const bgm = document.getElementById("bgm");
+
             bgm?.play();
         }
 
-        startMusic();
+        function handleMusic() {
+            const bgm = document.getElementById("bgm");
+            const icon = document.getElementById("music");
+
+            if(bgm){
+                if(bgm.paused){
+                    bgm.play();
+                    icon.style.color='inherit';
+                }else {
+                    bgm.pause();
+                    icon.style.color='gray';
+                }
+            }
+        }
+        
         function copyText(value) {
             const textToCopy = document.getElementById(`text-to-copy-${value}`).textContent;
 
@@ -37,21 +51,24 @@
         }
 
 
-
+        document.addEventListener('DOMContentLoaded', function() {
+            startMusic();
+        });
+        
     </script>
     <div id="parchment">
-        <img src="./logo.png" alt="logo2" width="130px" id="logo" />
 
+        <img src="./logo.png" alt="logo2" width="130px" id="logo" />
         <div>
-            <h1>HOGWARTS SCHOOL of WITCHCRAFT and WIZARDARY</h1>
-            <h2>태훈 효빈의 결혼 피로연 초대장</h2>
+            <h1>HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDARY</h1>
+            <h2>태훈 & 효빈의 결혼 피로연 초대장</h2>
         </div>
         <div>
             <p>친애하는 마법사 여러분께, </p>
             <p> 호그와트 마법학교에서는 <span class="bold">태훈 & 효빈</span> 두 사람의 결혼을 축하하기 위해 특별히 준비한 마법세계 결혼 피로연에 여러분을 정중히 초대합니다.
                 부디 참석하여 자리를 빛내주시길 바랍니다.</p>
 
-            <p><span class="bold">🪄 준비물:</span> 마법복장 <span class="light">(예: 망토, 모자 또는 애장하시는 마법의 장신구)</span> <br /> *
+            <p><span class="bold">🪄 준비물:</span> 마법복장 <span class="light">(망토, 모자 또는 애장하시는 마법의 장신구)</span> <br /> *
                 머글(노마지)의 출입은 엄격히 금지됩니다.</p>
             <p><span class="bold">🕰 연회 일시:</span> 2024년 12월 28일 (토) 저녁 6시</p>
             <p><span class="bold">📍 장소:</span> 호그와트 대연회장 (아래 지도 참고) </p>
@@ -84,16 +101,12 @@
         </div>
 
         <div class="footer">
-            <p>부디 오셔서 함께 축복해 주세요. 감사합니다.</p>
             <p>호그와트 마법학교,<br /> 결혼식 주최 위원회 드림</p>
         </div>
+        <svg id="music" xmlns="http://www.w3.org/2000/svg" onclick="handleMusic()" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
 
     </div>
-    <audio id="bgm" src="./prologue.m4a" autoplay loop></audio>
-    <!-- <button onclick="startMusic()">음악 재생</button> -->
-
-
-
+    <audio id="bgm" src="./prologue.m4a" loop></audio>
     </main>
 
 </body>

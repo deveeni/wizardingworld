@@ -15,26 +15,31 @@
 }
 body {
   background-color: #3c231b;
+
+  @media screen and (min-width: 768px) {
+    padding: 10em;
+  }
 }
 
 #parchment {
-  align-items: center;
-  position: absolute;
+  position: relative;
   display: flex;
-  width: 86%;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin: 1em 0;
-  padding: 3em 1em;
+  margin: 1em;
+  padding: 3em 1.5em;
   box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
-  background: #f3f1e1; /* #fffef0;*/
+  background: #f3f1e1;
   flex-direction: column;
-
   color: #3c231b;
 }
 
+#music {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
 #logo {
+  align-self: center;
   padding-bottom: 24px;
 }
 
@@ -49,7 +54,7 @@ h2 {
 }
 
 p {
-  line-height: 1em;
+  line-height: 1.3em;
   font-family: "Pretendard-Regular";
   font-size: small;
 }
@@ -78,7 +83,6 @@ p {
 
 .map {
   align-items: flex-end;
-
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -96,5 +100,4 @@ p {
 
 .footer {
   width: 100%;
-  text-align: left;
 }
