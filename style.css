@@ -16,6 +16,11 @@
   font-style: normal;
 }
 
+:root {
+  --primary-color: #3c231bb8;
+  --beige-color: #f5deb3;
+}
+
 body {
   background-color: #3c231b;
 
@@ -30,7 +35,7 @@ body {
   margin: 1em;
   padding: 3em 1.5em;
   box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
-  background: #f5deb3;
+  background: var(--beige-color);
   flex-direction: column;
   color: #3b2f2f;
   opacity: 0;
@@ -112,14 +117,6 @@ p {
   font-size: small;
 }
 
-.bold {
-  font-weight: 500;
-}
-
-.light {
-  font-weight: light;
-}
-
 .underline {
   text-decoration: underline;
 }
@@ -148,6 +145,10 @@ a {
   padding: 8px;
 }
 
+#text-to-copy-address {
+  color: var(--primary-color);
+}
+
 .map {
   align-items: end;
   display: flex;
@@ -158,7 +159,7 @@ a {
   border-top: 0.5px solid;
   width: 100%;
   margin-top: 16px;
-  color: #3c231bb8;
+  color: var(--primary-color);
 }
 
 #bank {
@@ -177,10 +178,12 @@ a {
 }
 
 #copy-alert {
-  position: absolute;
+  position: fixed;
   display: none;
-  color: yellow;
-  right: 10%;
-  background: gray;
+  color: var(--beige-color);
+  top: 16;
+  right: 16px;
+  z-index: 10;
+  background: var(--primary-color);
   padding: 4px;
 }
