@@ -16,6 +16,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "ParryHotter";
+  src: url("parry-hotter.regular.ttf") format("truetype");
+  font-weight: normal; /* Adjust if you have bold/italic versions */
+  font-style: normal;
+}
+
 :root {
   --primary-color: #3c231bb8;
   --beige-color: #f5deb3;
@@ -58,6 +65,11 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  h2 {
+    font-weight: 400;
+    font-family: "ParryHotter", sans-serif;
+  }
 }
 
 @keyframes fadeInOut {
@@ -186,4 +198,9 @@ a {
   z-index: 10;
   background: var(--primary-color);
   padding: 4px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
 }
