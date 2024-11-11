@@ -166,6 +166,10 @@ a {
 }
 
 #copy-alert {
+  position: absolute;
   display: none;
-  color: green;
+  color: yellow;
+  right: 10%;
+  background: gray;
+  padding: 4px;
 }
