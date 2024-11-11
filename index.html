@@ -96,8 +96,8 @@
             if (name) {
                 element.textContent = `${name}님`;
                 element.className = 'bold'
-                
-            }else{
+
+            } else {
                 element.textContent = `당신`;
 
             }
@@ -109,9 +109,8 @@
     <div id="parchment">
         <div id="envelope">
             <button onclick="handleSealClick()" id="seal">
-                <img class="seal-img" src="./toppng.com-hogwarts-seal-png-hogwarts-seal-977x961.png" alt="seal"
-                    width="100px" /></button>
-            <p><span  id="name"></span>을 초대합니다</p>
+                <img class="seal-img" src="./seal.png" alt="seal" width="100px" /></button>
+            <p><span id="name"></span>을 초대합니다</p>
         </div>
 
         <div id="invitation">
@@ -122,31 +121,26 @@
             </div>
             <div>
                 <p>친애하는 마법사 및 마녀 여러분께, </p>
-                <p> 호그와트 마법학교에서는 <span class="underline">태훈 & 효빈</span> 두 사람의 결혼을 축하하기 위해 특별히 준비한 마법세계 결혼 피로연에 여러분을 정중히
+                <p> 호그와트 마법학교에서는 태훈 & 효빈 두 사람의 결혼을 축하하기 위해 특별히 준비한 마법세계 결혼 피로연에 여러분을 정중히
                     초대합니다.
                     부디 참석하여 자리를 빛내주시길 바랍니다.</p>
 
-                <p><span class="bold">🪄 준비물:</span> <span class="bold">진정한 마법사🧙</span>의 복장을 환영합니다! <span class="light">(망토, 모자, 지팡이 무엇이든 / 해리포터 등장인물 코스프레 대환영!)</span> 
+                <p><span class="bold">🪄 준비물:</span> <span class="bold">진정한 마법사🧙</span>의 복장을 환영합니다! <span
+                        class="light">(망토, 모자, 지팡이 무엇이든 / 해리포터 등장인물 코스프레 대환영!)</span>
                     <br /> *
-                    <span class="bold">🙅비마법사(머글, 노마지, 일반인)의 출입은 엄격히 금지됩니다.</span></p>
+                    <span class="bold">🙅비마법사(머글, 노마지, 일반인)의 출입은 엄격히 금지됩니다.</span>
+                </p>
                 <p><span class="bold">🕰 연회 일시:</span> 2024년 12월 28일 (토) <span class="underline">저녁 6시</span></p>
-                <p><span class="bold">📍 장소:</span> 호그와트 대연회장 (아래 지도 참고) </p>
+                <p><span class="bold">📍 장소:</span> 호그와트 대연회장 <br />
+                    <span id="text-to-copy-address" onclick="copyText('address')">서울 서초구 서운로6길 22 지하1층 1호</span> <a
+                        href="https://naver.me/FiO3xpPn"><img src="./rolled_parchment.png" alt="navermap_icon"
+                            width="30px" /></a>
+                </p>
                 <br />
-                <p> <span class="bold">올빼미</span>를 통해 <span class="bold">참석여부</span>를 보내주시기 바랍니다, 저희가 멋진 파티를 준비하는 데 큰 도움이 될것입니다. <br />
+                <p> <span class="bold">올빼미</span>를 통해 <span class="bold">참석여부</span>를 보내주시기 바랍니다, 저희가 멋진 파티를 준비하는 데 큰
+                    도움이 될것입니다. <br />
                     <a href="https://forms.gle/maqEt3EidotFKspC6"><img id="hedwig" src="./owl.png" alt="hedwig"
                             width="70px"> ⬅️ Click</img> </a>
-            </div>
-
-
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.94252414703!2d127.02791641318608!3d37.48568267194308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca14892920099%3A0x7622624ae24a233a!2s1364-28%20Seocho-dong%2C%20Seocho%20District%2C%20Seoul%2C%20South%20Korea!5e0!3m2!1sen!2sie!4v1731187501925!5m2!1sen!2sie"
-                    width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <p><span id="text-to-copy-address" onclick="copyText('address')">서울 서초구 서운로6길 22 지하1층 1호</span> <a href="https://naver.me/FiO3xpPn"><img src="./navermap_icon.webp"
-                            alt="navermap_icon" width="30px" /></a></p>
-
-
             </div>
 
             <div class="bottom" class="light">
@@ -154,8 +148,7 @@
 
                 <p> 혹여 축의금을 전하고자 하시는 분께서는 현장에 설치하지 못하는 관계로, 은행으로 보내주시면 감사히 받겠습니다.</p>
                 <div id="bank">
-                    <img src="./toppng.com-bank-png-picture-bank-icon-3d-1264x1000.png" alt="bank" width="50px"
-                        onclick="handleBankClick()" />
+                    <img src="./bank.png" alt="bank" width="50px" onclick="handleBankClick()" />
                 </div>
 
                 <div id="bank-account">

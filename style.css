@@ -8,6 +8,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "GowunBatang-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #3c231b;
 
@@ -95,21 +103,21 @@ h1 {
 h2 {
   font-size: large;
   text-align: center;
-  font-family: "Chosunilbo_myungjo", sans-serif;
+  font-family: "GowunBatang-Regular", sans-serif;
 }
 
 p {
   line-height: 1.3em;
-  font-family: "Chosunilbo_myungjo", sans-serif;
+  font-family: "GowunBatang-Regular", sans-serif;
   font-size: small;
 }
 
 .bold {
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .light {
-  font-weight: lighter;
+  font-weight: light;
 }
 
 .underline {
@@ -138,10 +146,6 @@ a {
   align-items: end;
   display: flex;
   flex-direction: column;
-
-  img {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  }
 }
 
 .bottom {
