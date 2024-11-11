@@ -67,10 +67,13 @@
         function handleSealClick() {
             const envelope = document.getElementById("envelope");
             const invitation = document.getElementById("invitation");
+            const questions = document.getElementById("questions");
 
             startMusic();
             envelope.style.display = "none";
             invitation.style.display = "flex";
+            questions.style.display = "flex";
+
         }
 
         function handleBankClick() {
@@ -104,8 +107,8 @@
 
 
     </script>
-            <p id="copy-alert"> Copied!</p>
-    <div id="parchment">
+    <p id="copy-alert"> Copied!</p>
+    <div class="parchment">
         <div id="envelope">
             <h2>Invitaion to Hogwarts</h2>
             <button onclick="handleSealClick()" id="seal">
@@ -120,17 +123,23 @@
             </div>
             <div>
                 <p>친애하는 마법사 및 마녀 여러분께, </p>
-                <p> 호그와트 마법학교에서는 태훈과 효빈 두 사람의 결혼을 축하하기 위해 특별히 준비한 마법 세계 결혼 피로연에 여러분을 정중히 초대합니다. 부디 참석하여 자리를 빛내 주시기 바랍니다.</p>
-
-                <p><img class="icon" src="./sorting-hat.png" alt="hat" /> 준비물: 진정한 마법사의 복장을 환영합니다! (망토, 모자, 지팡이<img class="icon" src="./wand.png" alt="hat" width="12px" /> 무엇이든 / 해리포터, 신비한 동물사전 등장인물 코스프레 대환영!)
-                    <br /> 
-                    <img class="icon" src="./poisoning.png" alt="poisoning" width="16px"/> *비마법사(머글, 노마지, 일반인)의 출입은 엄격히 금지됩니다.
+                <p> 호그와트 마법학교에서는 태훈과 효빈 두 사람의 결혼을 축하하기 위해 특별히 준비한 마법 세계 결혼 피로연에 여러분을 정중히 초대합니다. 부디 참석하여 자리를 빛내 주시기 바랍니다.
                 </p>
-                <p> <img class="icon" src="./business-and-finance.png" alt="time" width="16px"/> 연회 일시: 2024년 12월 28일 (토) <span class="underline">저녁 6시</span></p>
-                <p><img class="icon" src="./maps.png" alt="map" width="16px"/> 장소: 호그와트 대연회장 <br />
-                    <span id="text-to-copy-address" onclick="copyText('address')">서울 서초구 서운로6길 22 지하1층 1호</span> 
+
+                
+                <p> <img class="icon" src="./business-and-finance.png" alt="time" width="16px" /> 2024년 12월 28일 (토)
+                    <span class="underline">저녁 6시</span></p>
+                <p><img class="icon" src="./pin.png" alt="map" width="16px" /> 호그와트 대연회장 <br />
+                    <span id="text-to-copy-address" onclick="copyText('address')">서울 서초구 서운로6길 22 지하1층 1호</span>
                     <a href="https://naver.me/FiO3xpPn"><img src="./rolled_parchment.png" alt="navermap_icon"
                             width="30px" /></a>
+                </p>
+                <p><img class="icon" src="./sorting-hat.png" alt="hat" /> 준비물: <span class="bold"> 진정한 마법사</span>의 복장을
+                    환영합니다!
+                    <br />(망토, 모자, 지팡이...
+                    해리포터, 신비한 동물사전 등장인물 코스프레 대환영!)
+                    <br />
+                    <img class="icon" src="./forbiden.png" alt="poisoning" width="16px" /> 비마법사(머글, 노마지)의 출입이 금지됩니다.
                 </p>
 
             </div>
@@ -160,8 +169,8 @@
                     <p><span id="text-to-copy-t" onclick="copyText('t')">이태훈 신한 110347136610</span> <br />
                         <span id="text-to-copy-b" onclick="copyText('b')">임효빈 신한 110474271477</span>
                     </p>
-                    
-                
+
+
                 </div>
 
             </div>
@@ -174,6 +183,8 @@
             </svg>
         </div>
     </div>
+
+  
     <audio id="bgm" src="./prologue.m4a" loop></audio>
     </main>
 

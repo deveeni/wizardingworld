@@ -36,7 +36,7 @@ body {
   }
 }
 
-#parchment {
+.parchment {
   position: relative;
   display: flex;
   margin: 1em;
@@ -157,10 +157,6 @@ a {
   padding: 8px;
 }
 
-#text-to-copy-address {
-  color: var(--primary-color);
-}
-
 .map {
   align-items: end;
   display: flex;
@@ -203,4 +199,18 @@ a {
 .icon {
   width: 16px;
   height: 16px;
+}
+
+#questions {
+  display: none;
+  margin-top: 8%;
+  font-family: "GowunBatang-Regular";
+
+  li {
+    font-size: 13px;
+  }
+}
+
+.bold {
+  font-weight: 600;
 }
