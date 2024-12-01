@@ -84,6 +84,15 @@ body {
 
 #invitation {
   display: none;
+}
+
+#notice {
+  display: none;
+  margin-bottom: 3rem;
+}
+
+.hero {
+  display: flex;
   flex-direction: column;
   animation: fadeInOut 1s ease-out forwards;
 }
